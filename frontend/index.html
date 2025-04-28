@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Sharing Service</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            margin: 0;
+        }
+        
+        .main-content {
+            background: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .upload-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #35424a;
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: #546973;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: #35424a;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Local File Sharing Service</h1>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="main-content">
+            <h2>Welcome to the File Sharing Service</h2>
+            <p>This simple service allows you to:</p>
+            <ul>
+                <li>Upload files of up to 50MB</li>
+                <li>Get a unique 6-character code link for each file</li>
+                <li>Share the link with others on your local network</li>
+                <li>Download files using the provided link</li>
+            </ul>
+            
+            <div class="upload-section">
+                <h3>Ready to share a file?</h3>
+                <a href="index.php" class="btn">Go to Upload Page</a>
+            </div>
+            
+            <h3>How It Works</h3>
+            <ol>
+                <li>Click the button above to go to the upload page</li>
+                <li>Select a file from your computer</li>
+                <li>Click "Upload File"</li>
+                <li>After uploading, you'll receive a unique link</li>
+                <li>Share this link with anyone who needs to download the file</li>
+                <li>The recipient can access the file by visiting the link</li>
+            </ol>
+            
+            <p><strong>Note:</strong> This service runs only on your local network. Files are accessible only to people connected to the same network.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Local File Sharing Service &copy; 2025</p>
+        </div>
+    </footer>
+</body>
+</html>

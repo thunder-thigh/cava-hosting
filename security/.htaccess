@@ -1,0 +1,40 @@
+# Enable rewrite engine
+RewriteEngine On
+
+# Prevent direct access to the uploads directory
+RewriteRule ^uploads/(.*)$ - [F,L]
+
+# Only allow the download.php script to access files
+<FilesMatch "^(index\.php|download\.php)$">
+    Order allow,deny
+    Allow from all
+</FilesMatch>
+
+# Protect .htaccess file itself
+<Files .htaccess>
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# Disable server signature
+ServerSignature Off
+
+# Disable directory listing
+Options -Indexes
+
+# Set PHP max upload sizes
+php_value upload_max_filesize 50M
+php_value post_max_size 52M
+php_value memory_limit 256M
+php_value max_execution_time 300
+php_value max_input_time 300
+
+# Protect against MIME type sniffing vulnerabilities
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# Set content security policy
+<IfModule mod_headers.c>
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self'; object-src 'none'"
+</IfModule>
