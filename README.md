@@ -1,2 +1,2 @@
 # cava-hosting
-Backend files for our hosting website
+Files to our hosting website
