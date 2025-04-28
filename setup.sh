@@ -11,7 +11,7 @@ sudo systemctl enable apache2
 
 # Create a directory for uploaded files
 sudo mkdir -p /var/www/html/uploads
-sudo chmod 777 /var/www/html/uploads  # Permissive for development only
+sudo chmod 777 /var/www/html/uploads  #for development only
 
 # Create the main website files
 sudo touch /var/www/html/index.php
